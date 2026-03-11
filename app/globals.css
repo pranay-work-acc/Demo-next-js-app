@@ -20,7 +20,11 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  /* background: var(--background); */
+  
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-bs{
+  background-color: #A100FF;
 }
