@@ -1,6 +1,6 @@
 export default function Footer(){
     return (
-        <footer className="bg-gray-800/50 text-white py-8">
+        <footer className="bg-gray-800/50 text-white py-8 static bottom-0">
             <div className="container mx-auto text-center">
               <div className="mb-4">
                 <a href="#" className="text-gray-400 hover:text-white mx-2">

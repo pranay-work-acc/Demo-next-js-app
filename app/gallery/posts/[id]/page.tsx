@@ -32,7 +32,7 @@ export default async function GalleryId({ params }: Props) {
     <div>
       <Navbar />
       <div className="flex flex-col items-center justify-center mb-10 mt-10">
-        <h1 className="text-white text-b">Post id:{id}</h1>
+        <h1 className="text-white font-bold">Post id:{id}</h1>
         <br />
         <img src={item.img} alt="" width={500} height={300} className="rounded-xl"/>
       </div>

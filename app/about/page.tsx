@@ -1,40 +1,34 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-export default function About() {
+import { getNews } from "@/app/services/newsapi";
+export default async function About() {
+  const news = await getNews();
+
   return (
     <div>
       <Navbar />
-
       <div className="flex flex-col items-center text-white justify-center mx-5 my-10 ">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          autem a ullam sit maxime, dolore, repudiandae nostrum cum quis
-          accusantium necessitatibus laudantium laboriosam? Quas exercitationem
-          magni repudiandae quae. Ullam, beatae.
-        </h1>
-        <br />
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          autem a ullam sit maxime, dolore, repudiandae nostrum cum quis
-          accusantium necessitatibus laudantium laboriosam? Quas exercitationem
-          magni repudiandae quae. Ullam, beatae.
-        </h1>
-        <br />
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          autem a ullam sit maxime, dolore, repudiandae nostrum cum quis
-          accusantium necessitatibus laudantium laboriosam? Quas exercitationem
-          magni repudiandae quae. Ullam, beatae.
-        </h1>
-        <br />
-        <h1 >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-          autem a ullam sit maxime, dolore, repudiandae nostrum cum quis
-          accusantium necessitatibus laudantium laboriosam? Quas exercitationem
-          magni repudiandae quae. Ullam, beatae.
-        </h1>
-        <br />
-        <br />
+        <div>
+          {news.articles.map((p) => (
+            <div key={p.url}>
+            <a
+              
+              href="#"
+              className="bg-neutral-primary-soft block  p-6 border border-default "
+            >
+              <h5 className="mb-3 text-2xl font-semibold tracking-tight text-heading leading-8">
+                {p.title}
+              </h5>
+
+              <p className="text-body">{p.description}</p>
+              
+            </a>
+            <br />
+            </div>
+            
+          ))}
+        </div>
+        
       </div>
       <Footer />
     </div>

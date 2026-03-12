@@ -9,7 +9,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "About", href: "/about", current: false },
+  { name: "Top headlines", href: "/about", current: false },
   { name: "Gallery", href: "/gallery", current: false },
 ];
 
@@ -46,11 +46,7 @@ export default function Example() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex shrink-0 items-center">
                   <Link href="/">
-                    <img
-                      alt="Your Company"
-                      src="https://static.vecteezy.com/system/resources/previews/007/736/848/original/minimal-and-simple-letter-gb-or-bg-logo-design-template-vector.jpg"
-                      className="h-8 w-auto"
-                    />
+                    <p className="text-white font-medium">Parso Tak News</p>
                   </Link>
                 </div>
 
